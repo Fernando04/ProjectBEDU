@@ -1,13 +1,14 @@
 import java.util.*
 fun main() {
-    val V = Validation()
-    val P = PrintList()
-    val S = SearchProduct()
+    val Va = Validation()
+    val Pri = PrintList()
+    val Sea = SearchProduct()
+    val nameCount = Sea.listaNombres("shampo")
+    val nameCount1 = Sea.listaNombres("cepillo")
+    val nameCount2 = Sea.listaNombres("cerveza")
 
-    val nameCount = S.listaNombres("shampo")
-    val nameCount1 = S.listaNombres("cepillo")
-
-
+    /*val usuario = Va.login("Fernando", "Pass1234")
+    println("$usuario")*/
     /*println("Dame un número")
     val reader = Scanner(System.`in`)
     var numeroDeProductos :Int = reader.nextInt()
@@ -16,5 +17,5 @@ fun main() {
         println(" $acumulador ")
     }
     println("El numero de años que tienes es : $numeroDeProductos")
-    V.verifyAge()*/
+    */
 }

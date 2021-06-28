@@ -1,7 +1,7 @@
 import java.util.*
 class Validation {
     val reader = Scanner(System.`in`)
-    fun verifyAge(){
+    /*fun verifyAge(){
         println("Ingresa la edad...")
         val age = readLine()?.toInt()//?significa que puede ser nulo y la función debe detenerse
         when {
@@ -15,14 +15,20 @@ class Validation {
                 println("Eres menor de edad")
             }
         }
-    }
+    }*/
+    val usuarios = mapOf(
+        "Osvldo@azc.org" to  "Azc",
+        "daniel@cliente.com" to "Cliente43",
+        "Fernando@empresa.mx" to "F3R2472"
+    );
+
         fun login(user: String, password: String): Boolean {
         fun validate(input: String): Boolean {
+            var loggedIn = false
             if (input.isEmpty()) {
                 return false
-
             }
-            return true
+            return loggedIn
         }
         val userValidate = validate(user)
         val passwordValidate = validate(password)
