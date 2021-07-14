@@ -1,0 +1,50 @@
+PHONE_LENGTH: Int = 10
+
+fun main() {
+    //los atributos declarados en el constructor son obligatorios desde el principio
+    //mientras que en los del cuerpo, son opcionales y se acceden al actualizar el perfil.
+    //No queremos que nadie modifique ningún atributo directamente, por eso todos serán privados
+    abstract class User(
+        private val name: String,
+        private var age: Int,
+        private val userToken: String,
+        private val email: String
+    ) {
+
+         var phoneNumber: Long = 0
+
+            set(value) {  //Utilizamos un setter para guardar un valor sólo cuando cumpla con los 10 dígitos de un número telefónico
+                if (value.toString().length == PHONE_LENGTH) {
+                    field = value
+                    println("Se ha validado el número")
+                } else {
+                    println("El número que ingresaste es incorrecto")
+
+                }
+                println("Ingrese su número de teléfono")
+                readLine()
+              // if (phoneNumber= (readLine()?.toInt() as Int).toLong())
+               //{"Número guardado exitosamente"}
+                //else ()
+
+
+            }
+        //Esta función nos permite actualizar los datos modificables de nuestro perfil
+        fun updateProfile(phoneNumber: Long, age:Int){
+            this.phoneNumber = phoneNumber
+            this.age =  age
+        }
+
+        inner class Mobile(
+            val sku: Int,
+            private val brand: String,
+            val color: String,
+            private val model: String,
+            private val price: Float){
+
+            init {
+                println("El celular es un $model de la marca $brand")
+            }
+
+
+    }}
